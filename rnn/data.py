@@ -25,21 +25,14 @@ def readLines(filename):
 # Build the category_lines dictionary, a list of lines per category
 category_lines = {}
 all_categories = []
-# for f in findFiles('data/names/*.txt'):
-#     word = f.split('\\')[1].split('.')[0]
-#     # word = repr(f.split('\')[1])
-#     print(word)
 
 for filename in findFiles('data/names/*.txt'):
     category = filename.split('\\')[1].split(".")[0]
-    # category = os.path.splitext(os.path.basename(filename))[0]
-    # print("hello fuck..")
-    # print(category)
     all_categories.append(category)
     lines = readLines(filename)
     category_lines[category] = lines
 
-print(all_categories) # show the categories..
+# print(all_categories) # show the categories..
 n_categories = len(all_categories)
 
 # Find letter index from all_letters, e.g. "a" = 0
